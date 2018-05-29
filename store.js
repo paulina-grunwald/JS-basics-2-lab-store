@@ -19,15 +19,19 @@ var shopFromStore =  function () {
   // Add the product with the matching referenceNumber to the shoppingCart
   var productLength = products.length;
   for(i=0; i < productLength; i++ ) {
-    if (products.referenceNumber[i] === refNr) {
-      shoppingCart.push(products.referenceNumber[i])
+    if (products[i].referenceNumber === refNr) {
+      shoppingCart.push(products[i].referenceNumber)
     } 
   }
 
   displayProductsFromShoppingCart();
 
   // calculate the total price of your cart, and use it:
-  displayTotalPrice(/*The variable holding the totol price*/);
+  displayTotalPrice(totalPrice) {
+    shoppingCart.forEach(element => {
+      
+    });(i=0, i)
+  };
 
   // Ask the user if they want to continue shopping,
   // if yes, call this function again
