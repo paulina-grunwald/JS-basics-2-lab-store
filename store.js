@@ -11,11 +11,18 @@ var products = [
   { referenceNumber: 1238, name: "Light On Yoga", price: 10 }
 ]
 // Declare `shoppingCart`, something where you will be storing all products that the user buys.
+var shoppingCart = [];
 // Declare `products`, the different that you will be selling under each of the departments.
 
 var shopFromStore =  function () {
   var refNr = askUserForReferenceNumber();
   // Add the product with the matching referenceNumber to the shoppingCart
+  var productLength = products.length;
+  for(i=0; i < productLength; i++ ) {
+    if (products.referenceNumber[i] === refNr) {
+      shoppingCart.push(products.referenceNumber[i])
+    } 
+  }
 
   displayProductsFromShoppingCart();
 
