@@ -2,7 +2,7 @@
 // var products = []
 var products = [
   { referenceNumber: 1231, name: "Super Lite Mat", price: 10 },
-  { referenceNumber: 1232, name: "Power Mat", price: 20 },
+  { referenceNumber: 1232, name: "Power Mat", price: 20 },a
   { referenceNumber: 1233, name: "Block", price: 30 },
   { referenceNumber: 1234, name: "Meditation cushion", price: 30 },
   { referenceNumber: 1235, name: "The best T-shirt", price: 200 },
@@ -23,24 +23,40 @@ var shopFromStore =  function () {
       shoppingCart.push(products[i].referenceNumber)
     } 
   }
+}
 
   displayProductsFromShoppingCart();
 
   // calculate the total price of your cart, and use it:
   displayTotalPrice(totalPrice) {
-    shoppingCart.forEach(element => {
-      
-    });(i=0, i)
+    var shoppingCartLength = shoppingCart.length;
+    for (var i = 0; i < shoppingCartLength; i++) {
+      totalPrice=+shoppingCart.price[i];
+    }
+    return totalPrice
   };
 
   // Ask the user if they want to continue shopping,
-  // if yes, call this function again
-  // if no, print the goodbye message
+  var continueShopping= function() {
+    var question = prompt("Do you want to continue shopping?");
+    // if yes, call this function again
+    if (continueShquestionopping.toLocaleLowerCase == "yes" || "y") {
+      var continueShopping = prompt("Do you want to continue shopping?");
+
+    } else if (continueShopquestionping.toLocaleLowerCase == "no" || "n") {
+    "Goodbye!"
+    } else {
+      var question = prompt("Please answer yes or no. Do you want to continue shopping?");
+    }
+  }
+
 };
 
 var displayProductsFromShoppingCart = function() {
   // iterate over the shoppingCart and display the contents
-
+  shoppingCart.forEach(function(item) {
+    return item
+})
   // use the printProductsOnScreen function for inspiration
 };
 
