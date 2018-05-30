@@ -23,19 +23,34 @@ var shopFromStore =  function () {
       shoppingCart.push(products[i].referenceNumber)
     } 
   }
+  return shoppingCart
+}
 
   displayProductsFromShoppingCart();
 
   // calculate the total price of your cart, and use it:
   displayTotalPrice(totalPrice) {
-    shoppingCart.forEach(element => {
-      
-    });(i=0, i)
+    var shoppingCartLength = shoppingCart.length;
+    for (var i = 0; i < shoppingCartLength; i++) {
+      totalPrice=+shoppingCart.price[i];
+    }
+    return totalPrice
   };
 
   // Ask the user if they want to continue shopping,
-  // if yes, call this function again
-  // if no, print the goodbye message
+  var continueShopping= function() {
+    var question = prompt("Do you want to continue shopping?");
+    // if yes, call this function again
+    if (continueShquestionopping.toLocaleLowerCase == "yes" || "y") {
+      var continueShopping = prompt("Do you want to continue shopping?");
+
+    } else if (continueShopquestionping.toLocaleLowerCase == "no" || "n") {
+    "Goodbye!"
+    } else {
+      var question = prompt("Please answer yes or no. Do you want to continue shopping?");
+    }
+  }
+
 };
 
 var displayProductsFromShoppingCart = function() {
